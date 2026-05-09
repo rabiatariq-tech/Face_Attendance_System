@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Face Attendance System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <!-- HEADER -->
+
+        <h1>🎓 Face Attendance System</h1>
+
+        <p class="subtitle">
+            AI-Based Real-Time Attendance Monitoring
+        </p>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main-content">
+
+            <!-- LEFT SIDE -->
+
+            <div class="video-section">
+
+                <div class="video-box">
+
+                    <img
+                        src="{{ url_for('video_feed') }}"
+                        id="video-stream"
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <div class="info-panel">
+
+                <div class="info-title">
+                    Student Information
+                </div>
+
+                <div class="info-item">
+                    <span class="label">
+                        Name:
+                    </span>
+
+                    <span id="student-name">
+                        Waiting...
+                    </span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">
+                        Roll Number:
+                    </span>
+
+                    <span id="student-roll">
+                        Waiting...
+                    </span>
+                </div>
+
+                <div class="info-item">
+                    <span class="label">
+                        Status:
+                    </span>
+
+                    <span id="student-status">
+                        Waiting for face...
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+            Press CTRL + C in terminal to stop system
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
